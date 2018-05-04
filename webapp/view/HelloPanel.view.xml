@@ -1,0 +1,35 @@
+<mvc:View controllerName="metu.egitim1metu.egitim1.controller.HelloPanel" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Panel headerText="{i18n>PanelHeaderText}">
+		<content>
+			<Button press="onShowDialog" text="Dialog"/>
+			<Button type="Accept" press="onPress" text="{i18n>Hi}"/>
+			<Input id="input" value="{/recipient/name}" description="Hello {/recipient/name}" width="60%"/>
+		</content>
+	</Panel>
+	<List id="list" headerText="List" width="auto"	
+      items="{
+         path : 'invoice>/Invoices',
+         sorter : {
+            path : 'ProductName' ,
+			group : true
+         }
+      }"
+	>
+		<headerToolbar>
+			<Toolbar>
+				<SearchField search="onSearch"/>
+			</Toolbar>
+		</headerToolbar>
+		<items>
+			<ObjectListItem title="{invoice>Quantity} x {invoice>ProductName}"
+			number="{
+				parts:[{path:'invoice>ExtendedPrice'},{path: 'view>/currency'}],
+				type : 'sap.ui.model.type.Currency'
+				}"
+				numberUnit="{view>currency}"
+				numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
+			/>
+		</items>
+	</List>
+</mvc:View>
