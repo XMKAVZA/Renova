@@ -17,7 +17,7 @@ sap.ui.define([
 		},
 		onPress: function() {
 		 var oBundle = this.getView().getModel("i18n").getResourceBundle();
-         var sMsg = oBundle.getText("Hi");
+         var sMsg = oBundle.getText("Hi1");
          var vInput = this.getView().byId("input").getValue();
          // show message
          MessageToast.show(sMsg + " " + vInput);
