@@ -24,7 +24,7 @@ sap.ui.define([
 				});
 
 				notification.onclick = function() {
-					window.open("https://webidetesting9980004-s0015750449trial.dispatcher.hanatrial.ondemand.com/webapp/extended_runnable_file.html?hc_orionpath=%2Fs0015750449trial%24S0015750449-OrionContent%2Fmetu.egitim1&origional-url=index.html&sap-ui-appCacheBuster=..%2F&sap-ui-xx-componentPreload=off");
+					// window.open("https://webidetesting9980004-s0015750449trial.dispatcher.hanatrial.ondemand.com/webapp/extended_runnable_file.html?hc_orionpath=%2Fs0015750449trial%24S0015750449-OrionContent%2Fmetu.egitim1&origional-url=index.html&sap-ui-appCacheBuster=..%2F&sap-ui-xx-componentPreload=off");
 				};
 
 			}
